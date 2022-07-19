@@ -1,0 +1,175 @@
+:root {
+	--primario: white;
+	--secundario: white;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background:  #040C18;
+	font-family: 'Quicksand', sans-serif;
+
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 800px;
+	border-radius: 10px;
+	border:1px solid blueviolet;
+	overflow: hidden;
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+	background:  #0f1927;
+	min-height: 60vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.columna-izquierda {
+	padding: 40px;
+}
+
+.columna-derecha {
+	background-image: url("logo.svg");
+	background-size:355px;
+	background-position:center;
+	background-color: white;
+}
+
+.header {
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.header h1 {
+	color: var(--primario);
+}
+
+.header p {
+	color: var(--secundario);
+}
+
+label {
+	margin-bottom: 10px;
+	display: block;
+	font-weight: 500;
+	color: var(--secundario);
+	font-size: 14px;
+	color:white;
+}
+
+.contenedor-input {
+	position: relative;
+}
+
+.registro {
+	display: none;
+}
+
+.registro.activo {
+	display: block;
+}
+
+.exito {
+	display: none;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.exito.activo {
+	display: flex;
+}
+
+.exito svg {
+	width: 50px;
+	height: 50px;
+	color: var(--primario);
+}
+
+
+input {
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	width: 100%;
+	border: 1px solid blueviolet;
+	border-radius: 5px;
+	padding: 0 20px 0 45px;
+	margin-bottom: 20px;
+	background: inherit;
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+	transition: .3s ease all;
+}
+
+input:focus {
+	outline: none;
+	border: 2px solid white;
+}
+
+.contenedor-input svg {
+	position: absolute;
+	color: white;
+	top: 17px;
+	left: 17px;
+} 
+
+.contenedor-boton {
+	display: flex;
+	justify-content: center;
+}
+
+button {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+	border-radius: 5px;
+	margin-top: 20px;
+	background: none;
+	height: 50px;
+	color: var(--primario);
+	padding: 0 50px;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	border: 2px solid var(--primario);
+	cursor: pointer;
+	transition: .3s ease all;
+	outline: none;
+	color:white;
+}
+
+button:hover {
+	background: blueviolet;
+	color: black
+}
+
+button svg {
+	margin-left: 10px;
+	width: 20px;
+	height: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+	.contenedor{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.columna-derecha{
+		height: 300px;
+		min-width: 320px;
+		order: -1;
+		margin-top:20px;
+	}
+}
